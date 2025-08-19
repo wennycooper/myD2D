@@ -249,7 +249,7 @@ class HybridTrainer:
                 # 準備資料
                 images = batch['img'].to(self.device)
                 masks = batch['img_mask'].to(self.device)
-                labels = batch['anomaly'].to(self.device).squeeze().long()
+                labels = batch['anomaly'].to(self.device).squeeze(-1).long()
                 
                 # 調整mask維度到64x64 (attention resolution)
                 masks_64 = F.interpolate(

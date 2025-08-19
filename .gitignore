@@ -119,7 +119,7 @@ cython_debug/
 *.hdf5
 
 # Machine Learning datasets
-Datasets/
+# Datasets/  # Commented out to include VisA dataset in repo
 datasets/
 Data/
 
